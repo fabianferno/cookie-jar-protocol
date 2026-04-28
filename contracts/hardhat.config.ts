@@ -8,22 +8,11 @@ import "@nomicfoundation/hardhat-verify";
 
 const config: HardhatUserConfig = {
   solidity: {
-    compilers: [
-      {
-        version: "0.8.27",
-        settings: {
-          optimizer: { enabled: true, runs: 200 },
-          evmVersion: "cancun",
-        },
-      },
-      {
-        version: "0.8.26",
-        settings: {
-          optimizer: { enabled: true, runs: 200 },
-          evmVersion: "cancun",
-        },
-      },
-    ],
+    version: "0.8.26",
+    settings: {
+      optimizer: { enabled: true, runs: 200 },
+      evmVersion: "cancun",
+    },
   },
   paths: {
     sources: "./contracts",
