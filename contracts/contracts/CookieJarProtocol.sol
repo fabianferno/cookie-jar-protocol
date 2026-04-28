@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.26;
 
-import {IEAS, AttestationRequest, AttestationRequestData} from "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/contracts/EAS.sol";
-import {NO_EXPIRATION_TIME, EMPTY_UID} from "https://github.com/ethereum-attestation-service/eas-contracts/blob/master/contracts/Common.sol";
+import {IEAS, AttestationRequest, AttestationRequestData} from "@ethereum-attestation-service/eas-contracts/contracts/EAS.sol";
+import {NO_EXPIRATION_TIME, EMPTY_UID} from "@ethereum-attestation-service/eas-contracts/contracts/Common.sol";
 
 interface IERC20 {
     function transfer(address to, uint256 value) external returns (bool);
