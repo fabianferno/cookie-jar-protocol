@@ -20,9 +20,9 @@ export const POST = frames(async (ctx) => {
   console.log(ethToWei(ctx.searchParams["amount"]));
   const SourcechainId = ctx.searchParams["SourcechainId"];
   const chain = ctx.searchParams["chain"];
-  const jarId = ctx.searchParams["jarId"];
+  const jarId = ctx.searchParams["jarId"] as `0x${string}`;
   const amount = ethToWei(ctx.searchParams["amount"]);
-  const note = ctx.message.inputText;
+  const note = ctx.message.inputText ?? "";
   const calldata = encodeFunctionData({
     abi: cookieJarAbi,
     functionName: "withdraw",

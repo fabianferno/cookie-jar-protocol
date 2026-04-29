@@ -39,10 +39,10 @@ export default function Home({ params }: { params: { id: string } }) {
             address: cookieJarContractAddress(84532),
             functionName: 'withdrawCC',
             args: [
-                params.id,
-                amount,
+                params.id as `0x${string}`,
+                BigInt(amount),
                 message,
-                chain,
+                parseInt(chain),
             ]
         })
     }

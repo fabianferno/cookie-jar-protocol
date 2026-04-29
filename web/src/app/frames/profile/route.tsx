@@ -14,7 +14,7 @@ const handleRequest = frames(async (ctx) => {
     ),
     abi: cookieJarAbi,
     functionName: "jarIdToCookieJar",
-    args: [ctx.searchParams["jarId"]],
+    args: [ctx.searchParams["jarId"] as `0x${string}`],
   });
   console.log(jarData);
 
